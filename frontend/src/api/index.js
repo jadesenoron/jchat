@@ -39,7 +39,7 @@ export const API_URL = {
                 : `/api/chat?query=search&from_user=${userid}&to_user=${to_user_search}`,
     chatUsername: (userid, username) => process.env.NODE_ENV === 'development'
                     ? `http://${window.location.hostname}:3080/api/chat?query=username&from_user=${userid}&to_user=${username}`
-                    : `/api/chat?username=${userid}&to_user=${username}`,
+                    : `/api/chat?query=username&from_user=${userid}&to_user=${username}`,
     chatData: (userid) => process.env.NODE_ENV === 'development'
                 ? `http://${window.location.hostname}:3080/api/chat?query=chatids&from_user=${userid}`
                 : `/api/chat?query=chatids&from_user=${userid}`,

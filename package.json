@@ -17,7 +17,7 @@
     "windows": "set NODE_ENV=development && npm-run-all build server"
   },
   "nodemonConfig": {
-    "exec": "npm run windows",
+    "exec": "npm run dev",
     "watch": [
       "server/*",
       "public/*"
