@@ -61,9 +61,9 @@ typings/
 .next
 
 # temporary files
-tmp
+# tmp
 
 # public upload directory
-public/*-photo/
+# public/*-photo/
 
 .vscode/
