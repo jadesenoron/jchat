@@ -1,0 +1,26 @@
+.checkbox-group {
+  display: inline-block;
+  color: #ffffffc8;
+  margin-bottom: 2em;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+  background: rgba(40,40,40,0.2);
+  color:black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ffffffa8;
+  border-radius: 5px;
+  margin-bottom: 0;
+  margin-right: 0.5em;
+  transform: translateY(15%);
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-image: url('check.svg');
+}
+  

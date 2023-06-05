@@ -1,0 +1,154 @@
+
+.chat-conversation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.chat-conversation .no-conversation {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color:rgba(123, 124, 134, 0.719);
+  font-style: italic;
+  font-size: smaller;
+}
+
+
+.chat-conversation .chat-message {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.3em;
+  /* border: 1px solid red; */
+}
+
+.chat-conversation.right .chat-message {
+  flex-direction: row-reverse;
+}
+
+
+.chat-conversation .chat-message img {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.chat-conversation .chat-message .bubble-chat-message {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75%;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 10.5pt;
+  margin-left: 0.75em;
+  border-radius: 1.5em 1.5em 1.5em 0em;
+  background-color: rgb(91, 109, 230);
+  color:rgb(222, 230, 240);
+}
+
+.chat-conversation .chat-message.previous .bubble-chat-message {
+  border-radius: 1.5em 1.5em 1.5em 1.5em;
+  position: relative;
+  margin-left: 3em;
+}
+
+.chat-conversation.right .chat-message .bubble-chat-message {
+  margin-right: 0.75em;
+  margin-left: 0;
+  border-radius: 1.5em 1.5em 0em 1.5em;
+}
+
+.chat-conversation.right .chat-message.previous .bubble-chat-message {
+  border-radius: 1.5em 1.5em 1.5em 1.5em;
+  position: relative;
+  margin-right: 3em;
+}
+
+.chat-conversation .chat-time {
+  width: 100%;
+  color:rgb(84, 84, 91);
+  font-size: 8pt;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  margin-bottom: 1em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* border: 1px solid red; */
+}
+
+.chat-conversation.right .chat-time {
+  text-align: end;
+}
+
+.chat-conversation .chat-message .photos-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 75%;
+  margin-left: 0.75em;
+  background-color: transparent;
+}
+
+.photo-gallery {
+  position:relative;
+  width: 10em;
+  height: 10em;
+  -moz-box-shadow: 3px 3px 20px -14px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 3px 20px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 20px -14px rgba(0, 0, 0, 0.75);
+  margin: 0;
+  margin-right: 0.2em;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-radius: 1em;
+}
+
+.photo-gallery:hover::after {
+  content: ' ';
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(212, 220, 252, 0.225);
+  top: 0;
+  left: 0;
+  border-radius: 1em;
+}
+
+.photo-gallery:last-child {
+  position: relative;
+}
+
+.photo-gallery:last-child:hover {
+  position: relative;
+}
+
+.photo-gallery:last-child:hover::after {
+  position: absolute;
+  content: '...';
+  background-color: rgba(106, 106, 106, 0.634);
+  color: rgba(123, 124, 134, 0.501);
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.photo-gallery:last-child::after {
+  content: '...';
+  background-color: rgba(66, 65, 76, 0.7);
+  color: rgba(123, 124, 134, 0.719);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  font-weight: bolder;
+  font-size: 8em;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.1em;
+}

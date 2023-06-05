@@ -1,0 +1,102 @@
+
+.chat-contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 4.5em;
+  height: 4.5em;
+  width: 100%;
+  padding: 0.3em 1em;
+  max-width: 15em;
+}
+
+.chat-contact img {
+  min-width: 2.5em;
+}
+
+.chat-contact.online {
+  position:relative;
+}
+
+.chat-contact.online::after {
+  content: " ";
+  position: absolute;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: rgb(29, 213, 4);
+  border-radius: 10em;
+  bottom: 18.8%;
+  left: 5.8%;
+  z-index: 2;
+}
+
+.chat-contact.selected {
+  margin-left: 0.4em;
+  width: calc(100% - 0.5em);
+  position: relative;
+}
+
+.chat-contact.selected::before {
+  content: " ";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0b13d6;
+  border-radius: 5em 0 0 5em;
+  transform-origin: top left;
+  transform: scaleX(1.08);
+}
+
+.chat-contact .chat-contact-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-width: 12.5em;
+  max-width: 12.5em;
+}
+
+.chat-contact .chat-contact-details .contact-name {
+  position: relative;
+  color: rgba(217, 220, 235, 0.956);
+  font-size: 12pt;
+  font-weight: bold;
+  padding-left: 0.5em;
+}
+
+.chat-contact .chat-contact-details .contact-name span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color:rgb(165, 175, 193);
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.chat-contact.selected .chat-contact-details .contact-name {
+  color: rgb(255, 255, 255);
+}
+
+.chat-contact .chat-contact-details .contact-message {
+  color:rgba(163, 170, 182, 0.889);
+  padding-left: 0.7em;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.chat-contact.selected .chat-contact-details .contact-message {
+  font-weight: normal;
+}
+
+.chat-contact button.contact-button-transparent {
+  position: absolute;
+  height: 86%;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  left: 0;
+  top: 7%;
+}

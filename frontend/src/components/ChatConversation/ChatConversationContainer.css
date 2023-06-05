@@ -1,0 +1,66 @@
+.col-chat {
+  height: 100%;
+  overflow-x: none !important;
+}
+
+.chat-convo-container {
+  position: relative;
+  height: calc(100% - 3.8em);
+  width: 100%;
+  padding-left: 0.5em;
+  /* border: 1px solid violet */
+}
+
+.conversation-container {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 5.5em);
+  top: 0;
+  left: 0;
+  /* border: 2px solid rgb(34, 178, 65); */
+  overflow-y: auto;
+  overflow-x:hidden;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.chat-convo-container::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 3em;
+  background-image: linear-gradient(#b3b3f149, #1107381c, #00000000);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* border: 1px solid green; */
+}
+
+.send-message-container {
+  position: absolute;
+  width: 100%;
+  height: 6.3em;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  margin: auto 0;
+  padding: 1em;
+  /* border: 1px solid red; */
+}
+
+.send-message-container textarea {
+  min-height: 2.4em;
+  height: 3.2em;
+  background-color: rgb(1, 2, 15);
+  outline: none;
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 10pt;
+}
+
+.send-message-container textarea::placeholder {
+  color: grey;
+}
+.send-message-container textarea:focus {
+  background-color: rgb(1, 2, 15);
+}
